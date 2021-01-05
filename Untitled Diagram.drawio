@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-01-05T15:38:38.310Z" agent="5.0 (Macintosh; Intel Mac OS X 11_1_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" etag="4JYM24RymyarS2Zm5anr" version="14.1.8" type="github">
+<mxfile host="app.diagrams.net" modified="2021-01-05T16:02:48.952Z" agent="5.0 (Macintosh; Intel Mac OS X 11_1_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" etag="tMGk7bM_QJ_9IZZApPX-" version="14.1.8" type="github">
   <diagram id="llM6o6Dhp4E8ifdp-irI" name="Page-1">
     <mxGraphModel dx="2065" dy="1044" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -19,7 +19,7 @@
             <mxPoint x="240" y="330" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="epytFXtEuozFpQbF-66j-6" value="&lt;div style=&quot;text-align: justify&quot;&gt;The topic jms.topic.ipc.{tlcId} processes multiple types of messages:&lt;/div&gt;&lt;div style=&quot;text-align: justify&quot;&gt;- CommunicationsHeartbeatMessage (this message is sent by communications.HeartbeatSender)&lt;/div&gt;&lt;div style=&quot;text-align: justify&quot;&gt;- all subtypes of TlcOutputMessage&lt;/div&gt;&lt;div style=&quot;text-align: justify&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify&quot;&gt;- ControlHeartbeatMessage (this message is sent by control.HeartbeatSender) to jms.queue.communications.in.{tlcId}&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify&quot;&gt;- MonitoringHeartbeatMessage (this message is sent by monitor.JmsCommunicationsSender) to jms.queue.communications.in.{tlcId}&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify&quot;&gt;Uitwerken alle senders en receivers inclusief selectors&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+        <mxCell id="epytFXtEuozFpQbF-66j-6" value="&lt;div style=&quot;text-align: justify&quot;&gt;The topic jms.topic.ipc.{tlcId} processes multiple types of messages:&lt;/div&gt;&lt;div style=&quot;text-align: justify&quot;&gt;- CommunicationsHeartbeatMessage (this message is sent by communications.HeartbeatSender)&lt;/div&gt;&lt;div style=&quot;text-align: justify&quot;&gt;-ForecastingHeartbeatMessage(this message is sent by forecasting.ApplicationHeartbeatSender&lt;/div&gt;&lt;div style=&quot;text-align: justify&quot;&gt;- all subtypes of TlcOutputMessage&lt;/div&gt;&lt;div style=&quot;text-align: justify&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify&quot;&gt;- ControlHeartbeatMessage (this message is sent by control.HeartbeatSender) to jms.queue.communications.in.{tlcId}&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify&quot;&gt;- MonitoringHeartbeatMessage (this message is sent by monitor.JmsCommunicationsSender) to jms.queue.communications.in.{tlcId}&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify&quot;&gt;Uitwerken alle senders en receivers inclusief selectors&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="40" y="720" width="680" height="210" as="geometry" />
         </mxCell>
         <mxCell id="epytFXtEuozFpQbF-66j-7" value="&amp;lt;Consumer&amp;gt;&lt;br&gt;comm.JmsReceiver" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -93,6 +93,30 @@
         </mxCell>
         <mxCell id="8pNlJ9SulJ0dGumhLi0O-20" value="monitoring" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="215" y="245" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="8pNlJ9SulJ0dGumhLi0O-22" value="&amp;lt;producer&amp;gt;&lt;br&gt;forecast.ApplicationHeart&lt;br&gt;beatSender" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="515" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8pNlJ9SulJ0dGumhLi0O-23" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="8pNlJ9SulJ0dGumhLi0O-22" target="epytFXtEuozFpQbF-66j-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="190" y="465" as="sourcePoint" />
+            <mxPoint x="340" y="585" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8pNlJ9SulJ0dGumhLi0O-24" value="HM" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="555" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8pNlJ9SulJ0dGumhLi0O-25" value="forecasting" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="220" y="535" width="90" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="8pNlJ9SulJ0dGumhLi0O-26" value="&amp;lt;Consumer&amp;gt;&lt;br&gt;forecasting.JmsIpcReceiver" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="685" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8pNlJ9SulJ0dGumhLi0O-27" value="" style="endArrow=classic;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="8pNlJ9SulJ0dGumhLi0O-26">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="855" as="sourcePoint" />
+            <mxPoint x="520" y="510" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
