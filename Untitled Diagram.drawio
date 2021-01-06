@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-01-06T13:37:45.521Z" agent="5.0 (Macintosh; Intel Mac OS X 11_1_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" etag="I_0DqwvMk8pJllIBBUNq" version="14.1.8" type="github">
+<mxfile host="app.diagrams.net" modified="2021-01-06T13:49:13.955Z" agent="5.0 (Macintosh; Intel Mac OS X 11_1_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" etag="3NFqxMahXf5xRu5Akmsa" version="14.1.8" type="github">
   <diagram id="llM6o6Dhp4E8ifdp-irI" name="Page-1">
     <mxGraphModel dx="1892" dy="1342" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -10,7 +10,7 @@
         <mxCell id="epytFXtEuozFpQbF-66j-2" value="&amp;lt;topic&amp;gt;&lt;br&gt;jms.topic.ipc.{tlcId}" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.direct_data;whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="340" y="409.5" width="180" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="epytFXtEuozFpQbF-66j-3" value="&amp;lt;producer&amp;gt;&lt;br&gt;comm.HeartbeatSender" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+        <mxCell id="epytFXtEuozFpQbF-66j-3" value="&amp;lt;producer&amp;gt;&lt;br&gt;HeartbeatSender" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
           <mxGeometry x="30" y="369.5" width="150" height="60" as="geometry" />
         </mxCell>
         <mxCell id="epytFXtEuozFpQbF-66j-5" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="epytFXtEuozFpQbF-66j-3" target="epytFXtEuozFpQbF-66j-2" edge="1">
@@ -20,7 +20,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="epytFXtEuozFpQbF-66j-6" value="&lt;div style=&quot;text-align: justify&quot;&gt;The queue jms.queue.communications.in.{tlcId} receives multiple messages:&lt;/div&gt;&lt;span style=&quot;font-family: &amp;#34;jetbrains mono&amp;#34; , monospace ; text-align: justify ; background-color: rgb(255 , 255 , 255)&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;text-align: justify&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: rgb(255 , 255 , 255) ; font-family: &amp;#34;jetbrains mono&amp;#34; , monospace&quot;&gt;SetSignalStatesMessage (selector=&quot;... and TYPE=SETSIGNAL&quot;)&lt;/span&gt;&lt;span style=&quot;font-family: &amp;#34;jetbrains mono&amp;#34; , monospace ; text-align: justify ; background-color: rgb(255 , 255 , 255)&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;div style=&quot;text-align: justify&quot;&gt;&lt;span style=&quot;background-color: rgb(255 , 255 , 255) ; font-family: &amp;#34;jetbrains mono&amp;#34; , monospace&quot;&gt;- SetIntersectionStateMessage (selector=&quot;... and TYPE=SETINTERSECTION&quot;)&lt;/span&gt;&lt;/div&gt;&lt;span style=&quot;font-family: &amp;#34;jetbrains mono&amp;#34; , monospace ; text-align: justify ; background-color: rgb(255 , 255 , 255)&quot;&gt;-&lt;/span&gt;&amp;nbsp;&lt;span style=&quot;background-color: rgb(255 , 255 , 255) ; font-family: &amp;#34;jetbrains mono&amp;#34; , monospace&quot;&gt;SetOutputStateMessage&lt;br&gt;-&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: rgb(255 , 255 , 255) ; font-family: &amp;#34;jetbrains mono&amp;#34; , monospace&quot;&gt;SetVariableStateMessage&lt;br&gt;- ApplicationHeartbeatMessage&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-family: &amp;#34;jetbrains mono&amp;#34; , monospace ; text-align: justify ; background-color: rgb(255 , 255 , 255)&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;text-align: justify&quot;&gt;&amp;nbsp;All subtypes of TlcOutputMessage&lt;/span&gt;&lt;span style=&quot;background-color: rgb(255 , 255 , 255) ; font-family: &amp;#34;jetbrains mono&amp;#34; , monospace&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;div style=&quot;text-align: justify&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify&quot;&gt;The topic jms.topic.ipc.{tlcId} processes multiple types of messages:&lt;/div&gt;&lt;div style=&quot;text-align: justify&quot;&gt;- CommunicationsHeartbeatMessage (this message is sent by communications.HeartbeatSender)&lt;/div&gt;&lt;div style=&quot;text-align: justify&quot;&gt;-ForecastingHeartbeatMessage(this message is sent by forecasting.ApplicationHeartbeatSender&lt;/div&gt;&lt;div style=&quot;text-align: justify&quot;&gt;- all subtypes of TlcOutputMessage (?)&lt;/div&gt;&lt;div style=&quot;text-align: justify&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify&quot;&gt;- ControlHeartbeatMessage (this message is sent by control.HeartbeatSender) to jms.queue.communications.in.{tlcId}&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify&quot;&gt;- MonitoringHeartbeatMessage (this message is sent by monitor.JmsCommunicationsSender) to jms.queue.communications.in.{tlcId}&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify&quot;&gt;Uitwerken alle senders en receivers inclusief selectors&lt;/div&gt;&lt;div style=&quot;text-align: justify&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify&quot;&gt;Uitzoeken, dezelfde message wordt twee keer gepost tbv fasediagram?&lt;/div&gt;&lt;div style=&quot;text-align: justify&quot;&gt;- ControlIpcMessageRouter -&amp;gt; ApplictionEVentHandler.handleMessage() -&amp;gt; controlledTlc.get().onEvent(message)&lt;/div&gt;&lt;div style=&quot;text-align: justify&quot;&gt;- JmsInputReceiver&lt;/div&gt;&lt;div style=&quot;text-align: justify&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify&quot;&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="60" y="990" width="650" height="450" as="geometry" />
+          <mxGeometry x="60" y="850" width="650" height="450" as="geometry" />
         </mxCell>
         <mxCell id="epytFXtEuozFpQbF-66j-7" value="&amp;lt;Consumer&amp;gt;&lt;br&gt;JmsReceiver" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
           <mxGeometry x="650" y="-0.5" width="150" height="60" as="geometry" />
@@ -40,7 +40,7 @@
             <mxPoint x="530" y="349.5" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="8pNlJ9SulJ0dGumhLi0O-3" value="&amp;lt;producer&amp;gt;&lt;br&gt;control.HeartbeatSender" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+        <mxCell id="8pNlJ9SulJ0dGumhLi0O-3" value="&amp;lt;producer&amp;gt;&lt;br&gt;HeartbeatSender" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
           <mxGeometry x="40" y="-42.5" width="150" height="60" as="geometry" />
         </mxCell>
         <mxCell id="8pNlJ9SulJ0dGumhLi0O-4" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="8pNlJ9SulJ0dGumhLi0O-3" target="epytFXtEuozFpQbF-66j-1" edge="1">
@@ -79,7 +79,7 @@
             <mxPoint x="531.0799999999999" y="429.5" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="8pNlJ9SulJ0dGumhLi0O-17" value="&amp;lt;producer&amp;gt;&lt;br&gt;monitoring.HeartbeatSender" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+        <mxCell id="8pNlJ9SulJ0dGumhLi0O-17" value="&amp;lt;producer&amp;gt;&lt;br&gt;HeartbeatSender" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
           <mxGeometry x="40" y="47.5" width="150" height="60" as="geometry" />
         </mxCell>
         <mxCell id="8pNlJ9SulJ0dGumhLi0O-18" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" target="epytFXtEuozFpQbF-66j-1" edge="1">
@@ -94,7 +94,7 @@
         <mxCell id="8pNlJ9SulJ0dGumhLi0O-20" value="monitoring" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="225" y="62.5" width="40" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="8pNlJ9SulJ0dGumhLi0O-22" value="&amp;lt;producer&amp;gt;&lt;br&gt;forecast.ApplicationHeart&lt;br&gt;beatSender" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+        <mxCell id="8pNlJ9SulJ0dGumhLi0O-22" value="&amp;lt;producer&amp;gt;&lt;br&gt;ApplicationHeart&lt;br&gt;beatSender" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
           <mxGeometry x="30" y="454.5" width="150" height="60" as="geometry" />
         </mxCell>
         <mxCell id="8pNlJ9SulJ0dGumhLi0O-23" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="8pNlJ9SulJ0dGumhLi0O-22" target="epytFXtEuozFpQbF-66j-2" edge="1">
