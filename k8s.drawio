@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-06-10T09:47:41.574Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36" etag="rD7phZkiZlPKeKF2oD43" version="14.7.7" type="github">
+<mxfile host="app.diagrams.net" modified="2021-06-10T09:47:51.017Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36" etag="1_GhHlcSns36I17JJBBo" version="14.7.7" type="github">
   <diagram id="PxBFwtDOyrRGxz6yIbt6" name="Page-1">
     <mxGraphModel dx="1651" dy="1112" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
@@ -95,7 +95,7 @@
           <mxGeometry x="100" y="950" width="660" height="230" as="geometry" />
         </mxCell>
         <mxCell id="UrdgjcByPq0Cb-sOCazl-46" value="&lt;h1&gt;Versionering&lt;/h1&gt;&lt;div&gt;Voorstel is om de maven release te gebruiken voor het maken van een release. Hierdoor hebben we een versie nummer welke we kunnen gebruiken voor:&lt;/div&gt;&lt;div&gt;- image tag&lt;br&gt;- communicatie naar buitenwereld&lt;/div&gt;&lt;div&gt;- github tag&lt;/div&gt;&lt;div&gt;- documentatie / changelog / release notes&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Indien een api break, dan wordt het major versie nummer van de applicatie aangepast&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;lt;major&amp;gt;.&amp;lt;minor&amp;gt;.&amp;lt;patch&amp;gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;De services krijgen een naam op basis van:&lt;/div&gt;&lt;div&gt;- dataset&lt;/div&gt;&lt;div&gt;- api versie&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;span&gt;- service naam (mutation | bulk | lookup)&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;- applicatie versie&lt;/span&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="580" y="980" width="530" height="300" as="geometry" />
+          <mxGeometry x="585" y="960" width="530" height="300" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
